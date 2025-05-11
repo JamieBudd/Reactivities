@@ -5,9 +5,10 @@ export default function ServerError() {
     const { state } = useLocation();
     return (
         <Paper>
-            {state.error ? (
+            {
+                state.error ? (
                 <>
-                    <Typography gutterBottom variant="h3" sx={{ px: 4, pt: 2 }} color='secondary'>
+                    <Typography gutterBottom variant="h3" sx={{ px: 4, pt: 2 }} color="secondary">
                         {state.error?.message || 'There has been an error' }
                     </Typography>
                     <Divider />
